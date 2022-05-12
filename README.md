@@ -4,7 +4,7 @@
 
 The Constructed Wetland Model 1 (CWM1) is a general model which describes the biochemical transformation/degradation processes for organic matter, nitrogen and sulphur in constructed wetlands (Langergraber et al. 2009 [[1]](#1)).
 
-This code is designed to be coupled with a chemical species transport simulator. Both for horizontal flow (HFCW) and vertical flow (VFCW) constructed wetlands the transport simulator usually consists of a variably saturated flow model (Richards' equation) and transport of particulates and solutes (advection-dispersion equation).
+This code is designed to be coupled with a fluid flow and chemical species transport simulator. Both for horizontal flow (HFCW) and vertical flow (VFCW) constructed wetlands the transport simulator usually consists of a flow model (Richards' equation or Darcy's law) and transport of particulates and solutes (advection-dispersion equation).
 
 The model includes the interpolation of some temperature-dependent parameters af a function of the water temperature with the method suggested by Henze et al. 2006 [[2]](#2).
 
@@ -12,7 +12,7 @@ The CWM1 model consists of 17 processes (reactions) and 16 components (8 soluble
 
 ## Usage
 
-CWM1-MATLAB basically consists of a main function `cwm1.m` which can be called as follows:
+To run a simulation, the function `cwm1.m` can be called as follows:
 
 ```matlab
 C = cwm1(dt,params,init_cond)
@@ -38,7 +38,7 @@ Two versions are available in the release section:
 
 The compatibility with other systems is not guaranteed. The user is advised to build a specific executable with MATLAB Coder.
 
-## Benchmarks
+## Benchmark
 
 The file `main.m` shows an example of CWM1-MATLAB usage. The routine performs a speed comparison between plain MATLAB code and compiled .mex files.
 The routine also performs the validation of the code by comparison with CWM1 implemented in the PHREEQC software by Boog et al. 2018 [[3]](#3).
