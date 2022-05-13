@@ -47,6 +47,9 @@ The routine also performs the validation of the code by comparison with CWM1 imp
 
 The lines represent the simulated concentrations and circles represent the results from the PHREEQC model.
 
+While the PHREEQC model coupled to transport simulators (e.g., using PhreeqcRM module) is much more flexible for simulating a wide range of bio-chemical systems, the CWM1-matlab routine has the advantage to be significantly faster; this is crucial especially when the number of model instances is large (e.g., 2D/3D models).
+
+
 ## References
 
 <a id="1">[1]</a> Langergraber, G., Rousseau, D. P., García, J., & Mena, J. (2009). CWM1: a general model to describe biokinetic processes in subsurface flow constructed wetlands. *Water Science and Technology*, *59*(9), 1687-1697. DOI: [10.2166/wst.2009.131](https://doi.org/10.2166/wst.2009.131)
